@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(0, 0, 0);
+            }
+        </style>
+        <script src="svgelement.js"></script>
+        <script src="observable.js"></script>
+        <script src="asteroids.js"></script>
+    </head>
+    <body style="background-color: black">
+        <h1 style="font-size:40px;color:blue;text-align:center"><b><i>Asteroid</i></b></h1>
+        <div class="boxed">
+            <p id= "label" style="color:blue;font-size:16px;text-align:center">
+                <span id= "gameplaylabel" style="color:white;font-size:20px;text-align:left">
+                    <em><b>Gameplay:</b></em> <br>
+                    You control a spaceship which can shoot plasma bolts <br>
+                    Your mission is to utterly annihilate as many asteroids as possible<br>
+                    Destroying 20 asteroids will advance you to the next level<br>
+                    However the asteroids will travel faster in higher levels<br>
+                    You have 3 lives, colliding with an asteroid consumes one life<br>
+                    The game's over once you collide 3 times<br>
+                    To begin the game press the START button below the game display<br>
+                    If the game's performance worsens after a while consider switching to direct movement<br>
+                    Instructions to switch to direct movement can be found in the thrust code block within asteroid.ts<br>
+                    <b>To avoid <u>mouse aiming problems</u>, scroll down to the very bottom then press START</b><br>
+                    </b>    
+                </span>
+            </p>
+            <p style="color:white;font-size:16px;text-align:center">
+                <span id= "controlsLabel" style="color:white;font-size:20px;text-align:left">
+                    <em><b>Game Controls:</b></em> <br>
+                    Press [Q] to activate ship thrust || Press [Left Click] to fire <br>
+                </span>
+            </p>
+        </div>
+        <div style="text-align:center;">
+            <br>
+            <button type="button" class="block" style="color:black;font-size:30px;text-align:center" onclick="start();this.disabled=true;" type="button">Start</button> 
+        </div>    
+        <div class="boxed" style="text-align:center;">
+            <span>
+                <p style="color:white;font-size:20px;float: left; width: 10%; text-align: left">
+                </p>
+                <p style="color:white;font-size:20px;float: left; width: 26.6%; text-align: left">
+                    <span id= "levellabel" style="color:blue;font-size:20px;text-align:left">Level  </span>
+                    <span id= "level" style="color:blue;font-size:20px;text-align:center">1</span>
+                </p>
+                <p style="color:white;font-size:20px;float: left; width: 26.6%; text-align: center;">
+                    <span id= "scorelabel" style="color:blue;font-size:20px;text-align:center">Score  </span>
+                    <span id= "score" style="color:blue;font-size:20px;text-align:center">0</span>
+                </p>
+                <p style="color:white;font-size:20px;float: left; width: 26.6%; text-align: right;">
+                    <span id= "lifelabel" style="color:blue;font-size:20px;text-align:center">Lives  </span>
+                    <span id= "life" style="color:blue;font-size:20px;text-align:center">3</span>
+                </p>
+                <p style="color:white;font-size:20px;float: left; width: 10%; text-align: right">
+                </p>
+            </span>
+            <svg id="canvas" align="center" width="1200" height="550">
+            </svg>
+        </div>
+    </body>
+</html>

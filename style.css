@@ -1,0 +1,29 @@
+BODY, H2, H3, H4, H5, H6, TH, TD {
+font-family: arial, helvetica, sans-serif;
+}
+H1 {
+    font-size: 38px;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.block {
+    display: block;
+    width: 90%;
+    border: 5px solid black;
+    background-color: #4CAF50;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+  }
+
+.boxed {
+width: 90%;
+border: 5px solid green ;
+margin: auto;
+} 
+
+#child {
+    line-height: 300px
+}
